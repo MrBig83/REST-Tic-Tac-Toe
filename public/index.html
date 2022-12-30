@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Cabin+Sketch:wght@400;700&family=Exo+2&family=Nabla&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Tic-Tac-Toe</title>
+</head>
+<body>
+        <h1 class="theGame">Tic-Tac-Toe</h1>
+        <h3 class="roundText"> </h3>
+        <h3 class="playerTurn"> </h3>
+        <div class="info">
+            <div class="btnCancelInfoDiv">
+                <button class="btnCancelInfo">X</button>
+            </div>
+            <h2 class="infoHeader"></h2>
+            <p class="infoScore"></p>
+            <p class="infoBio"></p>
+            <div class="btnDeleteUserDiv">
+                <button class="btnDeleteUser">Delete user</button>
+            </div>
+            <div class="btnEditBioDiv">
+                <button class="btnEditBio">Edit Bio</button>
+                <button class="btnSaveBio">Save Bio</button>
+            </div>
+            <div class="editBioTxtDiv">
+                <textarea type="text" class="editBioTxt"></textarea>
+            </div>
+        </div>
+        <div class="inputs">
+
+            <div class="inputP1">
+                <label for="namePlayer1" class="labelP1">Player 1 name:</label>
+                <input type="text" class="namePlayer1" name="namePlayer1">
+            </div>
+            <div class="inputP2">
+                <label for="namePlayer2" class="labelP2">Player 2 name:</label>
+                <input type="text" class="namePlayer2" name="namePlayer2">
+            </div>  
+        </div>
+    <div class="btnCancelDiv">
+        <button class="btnCancel">X</button>
+    </div>
+
+    <div class="btn">
+        <button class="btnStart">START</button>
+    </div>
+
+    <div class="btnPlayDiv">
+        <button class="btnPlay">Play Game</button>
+    </div>
+    <div class="game-board">
+        <div class="box" id="a"></div>
+        <div class="box" id="b"></div>
+        <div class="box" id="c"></div>
+        <div class="box" id="d"></div>
+        <div class="box" id="e"></div>
+        <div class="box" id="f"></div>
+        <div class="box" id="g"></div>
+        <div class="box" id="h"></div>
+        <div class="box" id="i"></div>
+    </div>
+
+    <div class="highScore">
+        <h2>High Score</h2>
+        <div class="uls">
+            <ul class="ulName">
+                <li class="liHeaderName">PlayerName:</li>
+                
+            </ul>
+            <ul class="ulPoints">
+                <li class="liHeaderPoints">Score:</li>
+                
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+
+
+

@@ -1,0 +1,32 @@
+[
+  {
+    "ID": 1,
+    "userName": "Admin",
+    "bio": "The Admin! Stay away!",
+    "highScore": 3
+  },
+  {
+    "ID": 2,
+    "userName": "AwesomeDev",
+    "bio": "This is an awesome admin created from the mud in the swamps of Mordor...",
+    "highScore": 1
+  },
+  {
+    "ID": 3,
+    "userName": "Martin",
+    "bio": "This is an awesomeadmin created from the mud in the swamps of Mordor",
+    "highScore": 1
+  },
+  {
+    "ID": 5,
+    "userName": "Lotta",
+    "bio": "This is a n00b",
+    "highScore": 1
+  },
+  {
+    "ID": 6,
+    "userName": "Bernie",
+    "bio": "Bernie är fluffig",
+    "highScore": 1
+  }
+]

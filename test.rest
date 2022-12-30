@@ -1,0 +1,43 @@
+GET http://localhost:3000/users
+
+###
+
+GET http://localhost:3000/users/usersList/1
+
+###
+
+GET http://localhost:3000/users/usersList
+
+###
+
+POST http://localhost:3000/users/newUser
+Content-Type: application/json
+
+{
+    "ID" : "",
+    "userName" : "Adam",
+    "bio" : "This is a testuser",
+    "highScore" : 0
+}
+
+###
+
+PUT http://localhost:3000/users/update
+Content-Type: application/json
+
+{
+    "ID": 6,
+    "userName" : "Leif",
+    "bio" : "Truckförare på dagen. Batman på natten.",
+    "highScore" : "score"
+}
+
+###
+
+DELETE http://localhost:3000/users/usersList/delete/9
+
+###
+// NEDAN FÖLJER FUNKTIONER FÖR BRÄDET! TA BORT INNAN INLÄMNING!!
+GET http://localhost:3000/board
+
+###
