@@ -1,0 +1,35 @@
+GET http://localhost:3000/users/usersList/1
+
+###
+
+GET http://localhost:3000/users/usersList
+
+###
+
+POST http://localhost:3000/users/newUser
+Content-Type: application/json
+
+{
+    "ID" : "",
+    "userName" : "RestTest",
+    "bio" : "This is a testuser created from the mud in the swamps of Mordor",
+    "highScore" : 0
+}
+
+###
+
+PUT http://localhost:3000/users/update
+Content-Type: application/json
+
+{
+    "ID": 5,
+    "userName" : "Martin",
+    "bio" : "Kodare på dagen. Batman på natten.",
+    "highScore" : "score"
+}
+
+###
+
+DELETE http://localhost:3000/users/usersList/delete/3
+
+###
