@@ -106,7 +106,7 @@ router.put("/update", function(req, res){
         const newCreds = req.body;
 
             for (let i = 0; i < users.length; i++){
-                if (users[i].userName == newCreds.userName){               
+                if (users[i].ID == newCreds.ID){               
                     if(users[i].userName != ""){
                         users[i].userName = newCreds.userName
                     }

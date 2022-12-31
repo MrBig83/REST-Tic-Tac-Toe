@@ -22,7 +22,7 @@ PUT http://localhost:3000/users/update
 Content-Type: application/json
 
 {
-    "ID": 6,
+    "ID": 5,
     "userName" : "Martin",
     "bio" : "Kodare på dagen. Batman på natten.",
     "highScore" : "score"

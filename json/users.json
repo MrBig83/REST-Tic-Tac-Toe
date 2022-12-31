@@ -8,7 +8,7 @@
   {
     "ID": 2,
     "userName": "AwesomeDev",
-    "bio": "This is an awesome admin created from the mud in the swamps of Mordor...xsdf",
+    "bio": "This is an awesome admin created from the mud in the swamps of Mordor...xsdffghdsdf",
     "highScore": 1
   },
   {
@@ -16,11 +16,5 @@
     "userName": "Martin",
     "bio": "Kodare på dagen. Batman på natten.",
     "highScore": 6
-  },
-  {
-    "ID": 5,
-    "userName": "RestTest",
-    "bio": "This is a testuser created from the mud in the swamps of Mordor",
-    "highScore": 0
   }
 ]
