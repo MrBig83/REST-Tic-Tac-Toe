@@ -138,7 +138,6 @@ router.delete("/usersList/delete/:ID", function(req, res){
 
         for (let i = 0; i < users.length; i++){
             if (users[i].ID == user.ID){
-                res.status(204).send(users[i].userName + " removed");
                 users.splice(i, 1);
             }            
          }
@@ -149,5 +148,6 @@ router.delete("/usersList/delete/:ID", function(req, res){
         })
         return;
     })
+    res.status(201).send("User succsessfully removed");
 });
 module.exports = router;

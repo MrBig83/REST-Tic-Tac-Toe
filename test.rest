@@ -30,6 +30,6 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3000/users/usersList/delete/6
+DELETE http://localhost:3000/users/usersList/delete/3
 
 ###
