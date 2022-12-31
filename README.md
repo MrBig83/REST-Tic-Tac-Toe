@@ -1,5 +1,5 @@
 # REST-Tic-Tac-Toe
-
+Note: Even if this project is submitted, it is still a work in progress. (But good enough to submit)
 ## Uppgiften:
 I denna uppgiften siktar jag på betyget VG. <br>
 Det är ett enkelt Tic-Tac-Toe-spel (luffarshcack), där resursen som används är spelarlistan. <br>
