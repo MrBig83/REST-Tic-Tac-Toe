@@ -103,6 +103,10 @@ body {
     box-shadow: inset 4px 4px 8px black;
     border: 1px solid rgba(255, 255, 255, 0.808);
 }
+.playerNameHeader, .playerScoreHeader{
+    font-size: 20px;
+    text-decoration: underline;
+}
 .infoScore{
     font-size: 25px;
     font-weight: 600;

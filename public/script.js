@@ -44,7 +44,15 @@ let players = [
     "playerSymbol" : "O"
     }
 ];
-
+renderHighScore()
+function clearBoard(){
+    gridArray = ["","","","","","","","",""]
+    renderGrid()
+    roundText.innerText = "";
+    playerTurnText.innerText="";
+    namePlayer1.value="";
+    namePlayer2.value="";
+}
 playBtn.addEventListener("click", (e) => {
     highScorePane.style.zIndex="-1"
     startBtn.style.display="block";
@@ -102,11 +110,14 @@ async function updatePlayer(player){
     })  
 }
 
-renderHighScore()
 async function renderHighScore(){
+    
     const response = await fetch("http://localhost:3000/users/usersList")
     const highScoreList = await response.json();
-    
+    ulName.innerHTML="";
+    ulName.innerHTML=`<li class="playerNameHeader">PlayerName:</li>`
+    ulPoints.innerHTML="";
+    ulPoints.innerHTML=`<li class="playerScoreHeader">Score:</li>`
     for(let i = 0; i < highScoreList.length; i++){
         const liName = document.createElement("li")
         const liScore = document.createElement("li")
@@ -121,7 +132,7 @@ async function renderHighScore(){
 }
 
 function showInfo(name){
-    lala(name)
+    lala()
     async function lala(){
     const response = await fetch("http://localhost:3000/users/usersList")
     const info = await response.json();
@@ -134,12 +145,16 @@ function showInfo(name){
             infoScore.innerText="HighScore: " + info[i].highScore
         }
     }}
+    btnEditBio.style.display="flex"
+    btnSaveBio.style.display="none"
     info.style.display="flex"
     info.style.zIndex="2"
     cancelInfoBtn.style.display="block"    
 }
 
 cancelInfoBtn.addEventListener("click", (e)=> {
+    editBioTxtDiv.style.display="none"
+    infoBio.style.display="flex" 
     info.style.display="none"
     cancelInfoBtn.style.display="none"
 })
@@ -162,6 +177,10 @@ function editBio(){
                 "highScore" : ""
             })
         })
+    info.style.display="none"
+    cancelInfoBtn.style.display="none"
+    editBioTxtDiv.style.display="none"
+    infoBio.style.display="flex" 
     }
 }
 async function deleteUser(){
@@ -169,7 +188,11 @@ async function deleteUser(){
     {
         method: "DELETE",
     });
-
+    info.style.display="none"
+    cancelInfoBtn.style.display="none"
+    editBioTxtDiv.style.display="none"
+    infoBio.style.display="flex"
+    renderHighScore()
 }
 
 function displayRound(){
@@ -202,6 +225,7 @@ function renderGrid(){
 }
 
 gridA.addEventListener("click", (e) => {
+    console.log(e)
     if(gridArray[0] == ""){ //Loopa eller gör någon funktion... DRY!!
         if(round%2 != 0){
             gridArray[0] = players[0].playerSymbol;
@@ -344,7 +368,11 @@ function winCheck(){
 
         ){
         playerTurnText.innerText="THE WINNER IS " + playerTurn;    
-       
+        setTimeout(() => {
+            clearBoard()
+            renderHighScore()    
+        }, 1000);
+        
         saveNewUser()
             async function saveNewUser(){
                 const response = await fetch("http://localhost:3000/users/usersList")

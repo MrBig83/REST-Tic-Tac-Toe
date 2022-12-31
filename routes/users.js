@@ -27,11 +27,11 @@ router.get("/usersList/:ID", function(req, res){
 
          for (let i = 0; i < users.length; i++){
             if (users[i].ID == req.params.ID){
-                specificUser(users[i].userName, users[i].ID)
+                specificUser(users[i].userName, users[i].ID, users[i].highScore)
             }
          }
-         function specificUser(namn, ID){
-            res.send("Användare: " + namn + " har IDnr. : " + ID)
+         function specificUser(namn, ID, highScore){
+            res.send("Användare med id: " + ID + " har användatnamn: " + namn + " och ett highscore på: " + highScore)
             
          }
          
