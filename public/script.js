@@ -225,7 +225,7 @@ function renderGrid(){
 }
 
 gridA.addEventListener("click", (e) => {
-    console.log(e)
+    console.log(e.path[0].id)
     if(gridArray[0] == ""){ //Loopa eller gör någon funktion... DRY!!
         if(round%2 != 0){
             gridArray[0] = players[0].playerSymbol;
@@ -239,6 +239,7 @@ gridA.addEventListener("click", (e) => {
     }
 })
 gridB.addEventListener("click", (e) => {
+    console.log(e)
     if(gridArray[1] == ""){
         if(round%2 != 0){
             gridArray[1] = players[0].playerSymbol;
